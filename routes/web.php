@@ -23,8 +23,8 @@ Route::controller(NewsController::class)->prefix('admin')->group(function() {
 
 use App\Http\Controllers\Admin\ProfileController;
 Route::controller(ProfileController::class)-> prefix('admin')-> group(function(){
-    Route::get('profile/create','add');
-    Route::get('profile/edit','edit');
+    Route::get('profile/create','add')->middleware('auth');
+    Route::get('profile/edit','edit')->middleware('auth');
 }) ;
 
 //「http://XXXXXX.jp/XXX というアクセスが来たときに、 AAAControllerのbbbというAction に渡すRoutingの設定」を書いてみてください
