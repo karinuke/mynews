@@ -34,7 +34,14 @@
                         </div>
                     </div>
                     
-                    <form action="{{ route('admin.profile.create') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('admin.profile.create') }}" method="post">
+                       @if (count($errors) > 0)
+                            <ul>
+                                @foreach($errors->all() as $e)
+                                    <li>{{ $e }}</li>
+                                @endforeach
+                            </ul>
+                        @endif
                     <div class="form-group row">
                         <label class="col-md-2">氏名</label>
                         <div class="col-md-10">
