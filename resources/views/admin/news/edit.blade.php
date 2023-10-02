@@ -31,7 +31,7 @@
                         <div class="col-md-10">
                             <input type="file" class="form-control-file" name="image">
                             <div class="form-text text-info">
-                                設定中: {{ $news_form->image_path }}
+                                設定中: {{$news_form->image_path}}
                             </div>
                             <div class="form-check">
                                 <label class="form-check-label">
@@ -48,13 +48,13 @@
                         </div>
                     </div>
                 </form>
-                 {{-- 以下を追記 --}}
+                {{-- 以下を追記 --}}
                 <div class="row mt-5">
                     <div class="col-md-4 mx-auto">
                         <h2>編集履歴</h2>
                         <ul class="list-group">
-                            @if ($news_form->History != NULL)
-                                @foreach ($news_form->History as $history)
+                            @if ($news_form->histories != NULL)
+                                @foreach ($news_form->histories as $history)
                                     <li class="list-group-item">{{ $history->edited_at }}</li>
                                 @endforeach
                             @endif

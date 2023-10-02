@@ -33,8 +33,8 @@
                             <tr>
                                 <th width="5%">ID</th>
                                 <th width="10%">名前</th>
-                                 <th width="5%">性別</th>
-                                  <th width="10%">趣味</th>
+                                <th width="5%">性別</th>
+                                <th width="10%">趣味</th>
                                 <th width="50%">自己紹介</th>
                                 <th width="10%">操作</th>
                             </tr>
@@ -49,11 +49,9 @@
                                     <td>{{ Str::limit($profiles->introduction, 250) }}</td>
                                     <td>
                                         <div>
-                                            <a href="{{ route('admin.profile.edit', ['id' => $profiles->id]) }}">編集</a>
+                                            <a href="{{ route('admin.profile.edit', ['id' => $profiles->id]) }}">更新</a>
                                         </div>
-                                        <div>
-                                            <a href="{{ route('admin.profile.delete', ['id' => $profiles->id]) }}">削除</a>
-                                        </div>
+                                        
                                     </td>
                                 </tr>
                             @endforeach
