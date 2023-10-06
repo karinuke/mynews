@@ -49,7 +49,7 @@
                                     <td>{{ Str::limit($profiles->introduction, 250) }}</td>
                                     <td>
                                         <div>
-                                            <a href="{{ route('admin.profile.edit', ['id' => $profiles->id]) }}">更新</a>
+                                            <a href="{{ route('admin.profile.edit', ['id' => $profiles->id]) }}">編集</a>
                                         </div>
                                         
                                     </td>
