@@ -48,7 +48,8 @@ use App\Http\AAAController;
 Route::controller(AAAController::class) -> group(function(){
     Route::get('XXX','bbb');
 });
+*/
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-*/

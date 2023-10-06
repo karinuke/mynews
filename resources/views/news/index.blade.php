@@ -1,4 +1,5 @@
 @extends('layouts.front')
+@section('title', 'トップページ')
 
 @section('content')
     <div class="container">
@@ -10,8 +11,8 @@
                         <div class="col-md-6">
                             <div class="caption mx-auto">
                                 <div class="image">
-                                    @if ($headline->image_path)
-                                        <img src="{{ secure_asset('storage/image/' . $headline->image_path) }}">
+                                    @if ($headline ->image_path)
+                                        <img src="{{ secure_asset('storage/image/'.$headline->image_path) }}">
                                     @endif
                                 </div>
                                 <div class="title p-2">
